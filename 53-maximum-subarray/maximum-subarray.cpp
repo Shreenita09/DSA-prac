@@ -1,6 +1,6 @@
 class Solution {
 public:
-    
+    //Kadane algo
     int maxSubArray(vector<int>& nums) {
        int sum=0;
        int maxsum=INT_MIN;
