@@ -1,17 +1,17 @@
 class Solution {
 public:
     int maxFreqSum(string s) {
-        int freq[26], maxVowel = 0, maxConso = 0;
+        int freq[26], maxV = 0, maxC = 0;
         for (char c : s) {
             int i = c - 'a';
             freq[i]++;
             if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
-                maxVowel = max(maxVowel, freq[i]);
+                maxV = max(maxV, freq[i]);
             }
             else {
-                maxConso = max(maxConso, freq[i]);
+                maxC = max(maxC, freq[i]);
             }
         }
-        return maxVowel + maxConso;
+        return maxV + maxC;
     }
 };
